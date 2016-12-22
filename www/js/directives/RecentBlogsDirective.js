@@ -23,8 +23,6 @@ define(['angular'], function (angular) {
                 var count = 0;
                 angular.forEach(data, function (content) {
                     count++;
-                    console.log(count);
-
                     if (count > 5) {
                         keepGoing = false;
                     } else {
