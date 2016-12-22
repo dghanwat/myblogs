@@ -1,0 +1,11 @@
+{
+  "id": 100005,
+  "date": "06/Dec/2016",
+  "fileName": "threadsafety",
+  "title": "Thread Safety Strategies",
+  "shortText": "Recently I was asked to look into a production issue in a payment application. After going through hours of debugging we could zero into the cause of the problem. Not surprisingly it was due concurrent requests from different users arriving at our server in same instant. Thankfully the fix was quick in this case, but this let me to think how important it is for todays developers to know about Thread Safety",
+  "category": "General",
+  "recommended": true,
+  "contentFile":"/js/data/blogs/threadsafety.html"
+
+}

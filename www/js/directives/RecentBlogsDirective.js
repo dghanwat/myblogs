@@ -20,12 +20,15 @@ define(['angular'], function (angular) {
             scope.recentBlogs = [];
             response.success(function (data) {
                 var keepGoing = true;
-                var count = 1;
+                var count = 0;
                 angular.forEach(data, function (content) {
                     count++;
-                    scope.recentBlogs.push(content);
-                    if (count == 5) {
+                    console.log(count);
+
+                    if (count > 5) {
                         keepGoing = false;
+                    } else {
+                        scope.recentBlogs.push(content);
                     }
                     if (!keepGoing) {
                         return;
