@@ -25,6 +25,10 @@ define(['ionic', 'angular', 'app', 'routes'], function (ionic, angular, app) {
                 console.log(ionic.Platform.platforms);
                 app.run(function($rootScope,$state) {
 
+                    $rootScope.$on('$stateChangeSuccess', function() {
+                        document.body.scrollTop = document.documentElement.scrollTop = 0;
+                    });
+
                     $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams){
 
 
