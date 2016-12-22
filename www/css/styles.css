@@ -4,3 +4,7 @@
 .pull-right {
   float: right !important;
 }
+
+.disqus-footer__wrapper {
+  display: none !important;
+}
