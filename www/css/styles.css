@@ -8,3 +8,8 @@
 .disqus-footer__wrapper {
   display: none !important;
 }
+
+.logo-cls img {
+  width: 220px !important;
+  padding-bottom: 5px;
+}
