@@ -1,6 +1,7 @@
 {
   "name": "my-blogs",
   "version": "1.1.1",
+  "engines": { "node": "4.0.0" },
   "description": "my-blogs: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
