@@ -12,7 +12,8 @@ requirejs.config({
         angularInputStars:      '../lib/angular-input-stars-directive/angular-input-stars',
         angularNotify: '../lib/angular-notify/angular-notify.min',
         angularBase64: '../lib/angular-base64/angular-base64.min',
-        ngCordova: '../lib/ngCordova/ng-cordova.min'
+        ngCordova: '../lib/ngCordova/ng-cordova.min',
+        angulartics:'../lib/angulartics/angulartics.min'
     },
     shim: {
         angular : {exports : 'angular'},
@@ -24,7 +25,8 @@ requirejs.config({
         angularInputStars : {deps: ['angular'], exports : 'angularInputStars'},
         angularNotify: {deps: ['angular']},
         angularBase64:{deps: ['angular']},
-        ngCordova:{deps:['angular']}
+        ngCordova:{deps:['angular']},
+        angulartics:{deps:['angular']}
     },
     priority: [
         'angular',

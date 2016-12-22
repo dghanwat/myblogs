@@ -10,7 +10,8 @@ define(['angular',
         'ionicAngular',
         'angularNotify',
         'angularBase64',
-        'ngCordova'
+        'ngCordova',
+        'angulartics'
     ],
 
     function (angular, uiRouter) {
@@ -26,7 +27,8 @@ define(['angular',
             'ui.router',
             'cgNotify',
             'base64',
-            'ngCordova'
+            'ngCordova',
+            'angulartics'
         ]);
 
         return app;
