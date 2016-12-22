@@ -1,5 +1,14 @@
 [
   {
+    "id": 100004,
+    "date": "05/Dec/2016",
+    "fileName": "bestwaytolearnscala",
+    "title": "Best way to learn Scala",
+    "shortText": "Very common questions that I am being asked by many Java developers is how to learn Scala. This post is dedicated to all my young (or I should say beginner) fellows who want to attain a certain level of proficiency in Scala",
+    "category": "Scala",
+    "recommended": true
+  },
+  {
     "id": 100003,
     "date": "04/Dec/2016",
     "fileName": "restapidesign",
