@@ -143,8 +143,10 @@
 
                                                              var disqus_config = function () {
                                                              this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-
-                                                             this.page.identifier = window.location.hash; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                                                var pageIdentifier = window.location.hash;
+                                                                pageIdentifier = pageIdentifier.replace("#/blog/","");
+                                                                pageIdentifier = pageIdentifier + 1;
+                                                             this.page.identifier = pageIdentifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                                                                 console.log(this.page.identifier);
                                                              };
                                                             (function() { // DON'T EDIT BELOW THIS LINE
