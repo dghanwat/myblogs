@@ -7,6 +7,7 @@ var app = express();
 app.use(compression());
 
 app.use(express.static(__dirname + '/www'));
+app.use(require('prerender-node'));
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/www/index.html');
