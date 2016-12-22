@@ -59,7 +59,8 @@
                                                                                                             class="fn"><a
                                                                                                             href="#/category">{{content.category}}</a></span></span>
                                                                                                     </div>
-                                                                                                    <div ng-bind-html="content.content"></div>
+                                                                                                    <!-- <div ng-bind-html="content.content"></div> -->
+                                                                                                     <ng-include src="content.contentFile"></ng-include>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </article>
