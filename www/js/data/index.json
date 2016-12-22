@@ -1,0 +1,39 @@
+[
+  {
+    "id": 100003,
+    "date": "04/Dec/2016",
+    "fileName": "restapidesign",
+    "title": "REST API Design",
+    "shortText": "Your goal for REST API design is to be easy to use, easy to adopt and flexible enough to dogfood for your user interfaces.",
+    "category": "API Management",
+    "recommended": true
+  },
+  {
+    "id": 100002,
+    "date": "03/Dec/2016",
+    "fileName": "apireference",
+    "title": "APIs, APIs Every Where",
+    "shortText": "Today's software is built as services. Rather than using web frameworks that invoke services and produce web pages...",
+    "category": "API Management",
+    "recommended": true
+  },
+  {
+    "id": 100001,
+    "date": "02/Dec/2016",
+    "fileName": "microservices",
+    "title": "Some Thoughts on Microservices",
+    "shortText": "Complexity has managed to creep in to your product. It's become increasingly difficult to evolve it at the pace you once could. It's time to look for a better way of doing things. Microservice architectures promise to keep your teams moving fast...",
+    "category": "Best Practises",
+    "recommended": true
+  },
+  {
+    "id": 100000,
+    "date": "01/Dec/2016",
+    "fileName": "first-principles-of-unit-testing",
+    "title": "F.I.R.S.T Principles of Unit Testing",
+    "shortText": "Writing Good Unit tests go a long way in ensuring high quality & reliability of a software application. While good unit tests are assets badly written tests can cause huge technical debt & false sense of reliability in your project team",
+    "category": "Best Practises",
+    "recommended": true
+  }
+
+]

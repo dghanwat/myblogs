@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "date": "01/Dec/2016",
+  "fileName": "first-principles-of-unit-testing",
+  "title":"F.I.R.S.T Principles of Unit Testing",
+  "shortText": "Writing Good Unit tests go a long way in ensuring high quality & reliability of a software application. While good unit tests are assets badly written tests can cause huge technical debt & false sense of reliability in your project team",
+  "category": "Best Practises",
+  "content":"<p>Writing Good Unit tests go a long way in ensuring high quality & reliability of a software application. While good unit tests are assets badly written tests can cause huge technical debt & false sense of reliability in your project team. In this post I will point of FIRST principles for Unit testing to help you write better tests.</p><p>F.I.R.S.T stands for</p><ul><li>FAST,</li><li>ISOLATED/INDEPENDENT,</li><li>REPEATABLE,</li><li>SELF-VALIDATING</li><li>THOROUGH/TIMELY</li><li></ul>"
+}

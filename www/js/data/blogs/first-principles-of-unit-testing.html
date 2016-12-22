@@ -1,0 +1,46 @@
+<p>Writing Good Unit tests go a long way in ensuring high quality & reliability of a software application. While good unit tests are assets badly written tests can cause huge technical debt & false sense of reliability in your project team. In this post I will point of FIRST principles for Unit testing to help you write better tests.</p>
+<p>F.I.R.S.T stands for</p>
+<ul>
+<li>FAST,</li>
+    <li>ISOLATED/INDEPENDENT,</li>
+    <li>REPEATABLE,</li>
+    <li>SELF-VALIDATING</li>
+    <li>THOROUGH/TIMELY</li>
+</ul>
+
+<h3>Fast</h3>
+<ul>
+<li>A developer should not hesitate to run the tests as they are slow.</li>
+    <li>All of these including setup, the actual test and tear down should execute really fast (milliseconds) as you may have thousands of tests in your entire project.</li>
+</ul>
+<h3>Isolated/Independent</h3>
+<ul>
+<li>A test method should do the 3 As => Arrange, Act, Assert</li>
+<li>Arrange: The data used in a test should not depend on the environment in which the test is running. All the data needed for a test should be arranged as part of the test.</li>
+<li>Act: Invoke the actual method under test.</li>
+<li>Assert: A test method should test for a single logical outcome, implying that typically there
+should be only a single logical assert. A logical assert could have multiple physical asserts as
+long as all the asserts test the state of a single object. In a few cases, an action can update
+multiple objects.</li>
+<li>Avoid doing asserts in the Arrange part, let it throw exceptions and your test will still fail.</li>
+<li>No order-of-run dependency. They should pass or fail the same way in suite or when run individually.</li>
+<li>Do not do any more actions after the assert statement(s), preferably single logical assert.</li>
+</ul>
+<h3>Repeatable</h3>
+<ul>
+<li>A test method should NOT depend on any data in the environment/instance in which it is running.</li>
+<li>Deterministic results - should yield the same results every time and at every location where they run.
+No dependency on date/time or random functions output.<li>
+<li>Each test should setup or arrange it's own data.
+What if a set of tests need some common data? Use Data Helper classes that can setup this data for re-usability.</li>
+</ul>
+
+<h3>Self-Validating</h3>
+<ul>
+<li>No manual inspection required to check whether the test has passed or failed.</li>
+</ul>
+<h3>Thorough and Timely</h3>
+<ul>
+<li>Should cover every use case scenario and NOT just aim for 100% coverage.</li>
+<li>Should try to aim for Test Driven Development (TDD) so that code does not need re-factoring later.</li>
+</ul>

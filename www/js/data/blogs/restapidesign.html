@@ -1,0 +1,101 @@
+<h1>REST API Design</h1>
+<h2>Copyright</h2>
+<p>All the contents are from the book "REST API Design Rulebook" . All rights reserved by the author and publisher</p>
+<h3>General concepts</h3>
+<h4>KISS</h4>
+<p>Anyone should be able to use your API without having to refer to the documentaTon.</p>
+<p>Use standard, concrete and shared terms, not your specific business terms or acronyms.</p>
+<p>Never allow application developers to do things more than one way.</p>
+<p>Design your API for your clients (Application developers), not for your data.</p>
+<p>Target major uses cases first, deal with exceptions later.</p>
+<h4>CURL</h4>
+<p>You should use CURL to share examples, which can be easily copy/paste.</p>
+<h4>Medium grained resources</h4>
+<p>You should use medium grained, not fine nor coarse. Resources shouldn&rsquo;t be nested more than two level deep</p>
+<h2>Design Rules</h2>
+<h3>URI Format</h3>
+<ul>
+    <li>Forward slash separator (/) must be used to indicate a hierarchical relationship</li>
+    <li>A trailing forward slash (/) should not be included in URIs</li>
+    <li>Hyphens (-) should be used to improve the readability of URIs</li>
+    <li>Underscores (_) should not be used in URIs</li>
+    <li>Lowercase letters should be preferred in URI paths</li>
+    <li>File extensions should not be included in URIs</li>
+</ul>
+<h3>URI Path Design</h3>
+<ul>
+    <li>A singular noun should be used for document names</li>
+    <li>A plural noun should be used for collection names</li>
+    <li>A plural noun should be used for store names</li>
+    <li>A verb or verb phrase should be used for controller names</li>
+    <li>Variable path segments may be substituted with identity-based values</li>
+    <li>CRUD function names should not be used in URIs</li>
+</ul>
+<h3>URI Query Design</h3>
+<ul>
+    <li>The query component of a URI may be used to filter collections or stores</li>
+    <li>The query component of a URI should be used to paginate collection or store results</li>
+</ul>
+<h3>Request Methods</h3>
+<ul>
+    <li>GET and POST must not be used to tunnel other request methods</li>
+    <li>GET must be used to retrieve a representation of a resource</li>
+    <li>HEAD should be used to retrieve response headers</li>
+    <li>PUT must be used to both insert and update a stored resource</li>
+    <li>PUT must be used to update mutable resources</li>
+    <li>POST must be used to create a new resource in a collection</li>
+    <li>POST must be used to execute controllers</li>
+    <li>DELETE must be used to remove a resource from its parent</li>
+    <li>OPTIONS should be used to retrieve metadata that describes a resource&rsquo;s available interactions</li>
+</ul>
+<h3>Response Status Codes</h3>
+<ul>
+    <li>200 (&ldquo;OK&rdquo;) should be used to indicate nonspecific success</li>
+    <li>200 (&ldquo;OK&rdquo;) must not be used to communicate errors in the response body</li>
+    <li>201 (&ldquo;Created&rdquo;) must be used to indicate successful resource creation</li>
+    <li>202 (&ldquo;Accepted&rdquo;) must be used to indicate successful start of an asynchronous action</li>
+    <li>204 (&ldquo;No Content&rdquo;) should be used when the response body is intentionally empty</li>
+    <li>401 (&ldquo;Unauthorized&rdquo;) must be used when there is a problem with the client&rsquo;s credentials</li>
+    <li>403 (&ldquo;Forbidden&rdquo;) should be used to forbid access regardless of authorization state</li>
+    <li>404 (&ldquo;Not Found&rdquo;) must be used when a client&rsquo;s URI cannot be mapped to a resource. This also means when the request to search or get details of an entity, like say /user/100</li>
+    <li>409 (&ldquo;Conflict&rdquo;) should be used to indicate a violation of resource state</li>
+    <li>412 (&ldquo;Precondition Failed&rdquo;) should be used to support conditional operations</li>
+    <li>500 (&ldquo;Internal Server Error&rdquo;) should be used to indicate API malfunction</li>
+</ul>
+<h3>HTTP Headers</h3>
+<ul>
+    <li>Content-Type must be used</li>
+    <li>Content-Length should be used</li>
+    <li>Last-Modified should be used in responses</li>
+    <li>ETag should be used in responses</li>
+    <li>Stores must support conditional PUT requests</li>
+    <li>Location must be used to specify the URI of a newly created resource</li>
+    <li>Cache-Control, Expires, and Date response headers should be used to encourage caching</li>
+    <li>Cache-Control, Expires, and Pragma response headers may be used to discourage caching</li>
+    <li>Caching should be encouraged</li>
+    <li>Expiration caching headers should be used with 200 (&ldquo;OK&rdquo;) responses</li>
+    <li>Expiration caching headers may optionally be used with 3xx and 4xx responses</li>
+    <li>Custom HTTP headers must not be used to change the behavior of HTTP methods</li>
+</ul>
+<h3>Error Representation</h3>
+<ul>
+    <li>A consistent form should be used to represent errors</li>
+    <li>A consistent form should be used to represent error responses</li>
+    <li>Consistent error types should be used for common error conditions</li>
+</ul>
+<h3>Versioning</h3>
+<ul>
+    <li>New URIs should be used to introduce new concepts</li>
+</ul>
+<h3>Security</h3>
+<ul>
+    <li>OAuth may be used to protect resources</li>
+    <li>API management solutions may be used to protect resources</li>
+</ul>
+<h3>JavaScript Clients</h3>
+<ul>
+    <li>JSONP should be supported to provide multi-origin read access from JavaScript</li>
+    <li>CORS should be supported to provide multi-origin read/write access from JavaScript</li>
+</ul>
+<h4>References</h4>
+<p><a href="http://blog.octo.com/wp-content/uploads/2014/10/RESTful-API-design-OCTO-Quick-Reference-Card-2.2.pdf">http://blog.octo.com/wp-content/uploads/2014/10/RESTful-API-design-OCTO-Quick-Reference-Card-2.2.pdf</a></p>

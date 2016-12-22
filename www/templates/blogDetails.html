@@ -1,0 +1,129 @@
+<div class="pl-region">
+  <div class="region-wrap pl-region-wrap-template pl-row no-pad" data-contains-level="0">
+    <!-- Static Content | Section -->
+    <section id="static-content_u1cad1bf" class="pl-sn pl-col-sm-12 pl-col-sm-offset-0 pl-sn-static-content"
+             data-object="PL_Content" data-clone="u1cad1bf" data-level="0">
+      <div class="pl-sn-wrap">
+        <div class="pl-sn-pad fix" data-bind="pledit: true">
+          <div class="pl-page-content"
+               data-bind="plclassname: [ (tplwrap() == 'wrapped') ? 'pl-content-area pl-content-layout' : '' ]">
+            <div class="static-template">
+              <div class="static-template-content">
+                <!-- Canvas Area | Section Template -->
+                <section id="pl_areaubc3c2" data-object="PLSectionArea" data-sid="pl_area" data-clone="ubc3c2"
+                         class="pl-area pl-area-sortable area-tag    pl-bg-cover section-pl_area" style="  ">
+                  <div class="pl-area-pad fix">
+                    <div class="pl-area-wrap " style="padding-top: 0px; padding-bottom: 0px;">
+                      <div class="pl-content ">
+                        <div class="pl-inner area-region pl-sortable-area editor-row" style="">
+                          <div class="row grid-row">
+                            <!-- Column | Section Template -->
+                            <section id="plcolumnubc479" data-object="PLColumn" data-sid="plcolumn" data-clone="ubc479"
+                                     class="pl-section span8 offset0    pl-bg-cover section-plcolumn" style="  ">
+                              <div class="pl-section-pad fix">
+                                <div class="pl-sortable-column pl-sortable-area editor-row ">
+                                  <div class="row grid-row">
+                                    <!-- iBlog | Section Template -->
+                                    <section id="ibloguqcl0lc" data-object="iBlog" data-sid="iblog" data-clone="uqcl0lc"
+                                             class="pl-section span12 offset0    pl-bg-cover multi-post section-iblog"
+                                             style="  ">
+                                      <div class="pl-section-pad fix">
+                                        <div class="row fix ipost" ng-repeat="content in blogIndex">
+                                          <div class="span1 ipost-date">
+                                            <span class="day"><time class="date time published updated sc">{{content.date | split:'/':0}}
+                                            </time> </span>
+                                            <span class="month"><time class="date time published updated sc"
+                                                                      >{{content.date | split:'/':1}}
+                                            </time> </span>
+                                          </div>
+                                          <div class="span10 offset1">
+                                            <article id="post-1196"
+                                                     class="use-flex-gallery post-1196 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-blog">
+
+                                              <div class="ipost-text">
+                                                <h1 class="title"><a href="#/blog/{{content.fileName}}">{{content.title}}</a></h1>
+
+                                                <div class="content">
+                                                  <div class="author-name">Category / <span
+                                                    class="author vcard sc "><span class="fn"><a
+                                                    href="#/category" >{{content.category}}</a></span></span></div>
+                                                  <div  ng-bind-html="content.content"></div>
+                                                </div>
+                                              </div>
+                                            </article>
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                    </section>
+                                  </div>
+                                  <span class="pl-column-forcer">&nbsp;</span>
+                                </div>
+                              </div>
+                            </section>
+                            <!-- Column | Section Template -->
+                            <section id="plcolumnubc694" data-object="PLColumn" data-sid="plcolumn" data-clone="ubc694"
+                                     class="pl-section span4 offset0    pl-bg-cover section-plcolumn" style="  ">
+                              <div class="pl-section-pad fix">
+                                <div class="pl-sortable-column pl-sortable-area editor-row ">
+                                  <div class="row grid-row">
+                                    <!-- Primary Sidebar | Section Template -->
+                                    <section id="sb_primaryubc7f0" data-object="PrimarySidebar" data-sid="sb_primary"
+                                             data-clone="ubc7f0"
+                                             class="pl-section span12 offset0    pl-bg-cover section-sb_primary"
+                                             style="  ">
+                                      <div class="pl-section-pad fix">
+                                        <ul id="list_sb_primary" class="sidebar_widgets fix">
+                                          <li id="recent-posts-2" class="widget widget_recent_entries">
+                                            <recent-blogs></recent-blogs>
+                                          </li>
+                                          <li id="recent-comments-2" class="widget widget_recent_comments">
+                                            <recommended-blogs></recommended-blogs>
+                                          </li>
+                                          <!--<li id="categories-2" class="widget widget_categories">-->
+                                            <!--<h2 class="widgettitle">Categories</h2>-->
+                                            <!--<ul>-->
+                                              <!--<li class="cat-item cat-item-72"><a href="../category/apps/index.html">Apps</a>-->
+                                              <!--</li>-->
+                                              <!--<li class="cat-item cat-item-66"><a-->
+                                                <!--href="../category/post-format-audio/index.html">Audio</a></li>-->
+                                              <!--<li class="cat-item cat-item-15"><a href="../category/blog/index.html">Blog</a>-->
+                                              <!--</li>-->
+                                              <!--<li class="cat-item cat-item-82"><a-->
+                                                <!--href="../category/dms/index.html">DMS</a></li>-->
+                                              <!--<li class="cat-item cat-item-64"><a-->
+                                                <!--href="../category/post-format-gallery/index.html">Gallery</a></li>-->
+                                              <!--<li class="cat-item cat-item-83"><a href="../category/guide/index.html">Guide</a>-->
+                                              <!--</li>-->
+                                              <!--<li class="cat-item cat-item-73"><a href="../category/mobile/index.html">Mobile</a>-->
+                                              <!--</li>-->
+                                              <!--<li class="cat-item cat-item-27"><a href="../category/quotes/index.html">Quotes</a>-->
+                                              <!--</li>-->
+                                              <!--<li class="cat-item cat-item-1"><a-->
+                                                <!--href="../category/uncategorized/index.html">Uncategorized</a></li>-->
+                                              <!--<li class="cat-item cat-item-30"><a href="../category/video/index.html">Video</a>-->
+                                              <!--</li>-->
+                                            <!--</ul>-->
+                                          <!--</li>-->
+                                        </ul>
+                                      </div>
+                                    </section>
+                                  </div>
+                                  <span class="pl-column-forcer">&nbsp;</span>
+                                </div>
+                              </div>
+                            </section>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
