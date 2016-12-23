@@ -14,7 +14,7 @@ define(['angular','jquery'], function (angular,$) {
         };
 
         function link(scope, element, attrs) {
-            if (!$window.FB) {
+            if (true) { //!$window.FB
                 // Load Facebook SDK if not already loaded
                 $.getScript('//connect.facebook.net/en_US/sdk.js', function () {
                     $window.FB.init({

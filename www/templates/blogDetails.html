@@ -150,77 +150,43 @@
                                                                                  fb-like="socialShareModel.Url"></span>
                                                                             <span google-plus="socialShareModel.Url"></span>
                                                                             <span tweet="socialShareModel.Name" tweet-url="socialShareModel.Url"></span>
-                                                                            <!--<a class="pl-karma pl-social-counter pl-social-pagelines pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
-                                                                               <!--id="pl-karma-1196" title="Give Karma"-->
-                                                                               <!--data-social="pagelines"> -->
-                                                                                <!--<span-->
-                                                                                    <!--class="pl-social-icon"><i-->
-                                                                                    <!--class="icon icon-thumbs-up"></i>-->
-                                                                                <!--</span>-->
-                                                                                <!--<span class="pl-social-count">13</span></a><span-->
-                                                                                <!--title="Facebook"-->
-                                                                                <!--class="pl-social-counter pl-social-facebook pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
-                                                                                <!--data-social="facebook">-->
-                                                                            <!--<span class="pl-social-icon"><i-->
-                                                                                    <!--class="icon icon-facebook"></i> </span><span-->
-                                                                                <!--class="pl-social-count"></span></span><span-->
-                                                                                <!--title="Linkedin"-->
-                                                                                <!--class="pl-social-counter pl-social-linkedin pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
-                                                                                <!--data-social="linkedin"><span-->
-                                                                                <!--class="pl-social-icon"><i-->
-                                                                                <!--class="icon icon-linkedin"></i> </span><span-->
-                                                                                <!--class="pl-social-count"></span></span>-->
-                                                                                <!--<span-->
-                                                                                <!--title="Twitter"-->
-                                                                                <!--class="pl-social-counter pl-social-twitter pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
-                                                                                <!--data-social="twitter">-->
-                                                                                    <!--<span class="pl-social-icon">-->
-                                                                                        <!--<i class="icon icon-twitter"></i>-->
-                                                                                <!--</span>-->
-
-                                                                                <!--class="pl-social-count"></span></span><span-->
-                                                                                <!--title="Pinterest"-->
-                                                                                <!--class="pl-social-counter pl-social-pinterest pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
-                                                                                <!--data-social="pinterest"><span-->
-                                                                                <!--class="pl-social-icon"><i-->
-                                                                                <!--class="icon icon-pinterest"></i> </span><span-->
-                                                                                <!--class="pl-social-count"></span></span>-->
+                                                                         </span>
                                                                         </div>
                                                                         <div class="clear"></div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
                                                         </section>
                                                     </div>
 
                                                     <div class="row grid-row">
-                                                        <div id="disqus_thread"></div>
-                                                        <script>
+                                                        <div class="fb-comments" data-href="{{socialShareModel.url}}" data-numposts="10"></div>
+                                                        <!--<div id="disqus_thread"></div>-->
+                                                        <!--<script>-->
 
-                                                            /**
-                                                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                                                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                                                            <!--/**-->
+                                                             <!--*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.-->
+                                                             <!--*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/-->
 
-                                                            var disqus_config = function () {
-                                                                this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-                                                                var pageIdentifier = window.location.hash;
-                                                                pageIdentifier = pageIdentifier.replace("#/blog/", "");
-                                                                pageIdentifier = pageIdentifier + 1;
-                                                                this.page.identifier = pageIdentifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                                                                console.log(this.page.identifier);
-                                                            };
-                                                            (function () { // DON'T EDIT BELOW THIS LINE
-                                                                var d = document, s = d.createElement('script');
-                                                                s.src = '//outofmymemory.disqus.com/embed.js';
-                                                                s.setAttribute('data-timestamp', +new Date());
-                                                                (d.head || d.body).appendChild(s);
-                                                            })();
-                                                        </script>
-                                                        <noscript>Please enable JavaScript to view the <a
-                                                                href="https://disqus.com/?ref_noscript">comments powered
-                                                            by Disqus.</a></noscript>
+                                                            <!--var disqus_config = function () {-->
+                                                                <!--this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable-->
+                                                                <!--var pageIdentifier = window.location.hash;-->
+                                                                <!--pageIdentifier = pageIdentifier.replace("#/blog/", "");-->
+                                                                <!--pageIdentifier = pageIdentifier + 1;-->
+                                                                <!--this.page.identifier = pageIdentifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable-->
+                                                                <!--console.log(this.page.identifier);-->
+                                                            <!--};-->
+                                                            <!--(function () { // DON'T EDIT BELOW THIS LINE-->
+                                                                <!--var d = document, s = d.createElement('script');-->
+                                                                <!--s.src = '//outofmymemory.disqus.com/embed.js';-->
+                                                                <!--s.setAttribute('data-timestamp', +new Date());-->
+                                                                <!--(d.head || d.body).appendChild(s);-->
+                                                            <!--})();-->
+                                                        <!--</script>-->
+                                                        <!--<noscript>Please enable JavaScript to view the <a-->
+                                                                <!--href="https://disqus.com/?ref_noscript">comments powered-->
+                                                            <!--by Disqus.</a></noscript>-->
 
-                                                    </div>
+                                                    <!--</div>-->
 
                                                 </div>
                                             </div>
