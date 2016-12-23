@@ -13,6 +13,7 @@ define(function (require) {
     directives.directive('ngPrint', require('directives/PrintDirective') );
     directives.directive('recentBlogs', require('directives/RecentBlogsDirective') );
     directives.directive('recommendedBlogs', require('directives/RecommendedBlogsDirective') );
+    directives.directive('facebookLike', require('directives/FBDirective') );
 
     return directives;
 });

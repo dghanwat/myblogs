@@ -8,7 +8,8 @@ define(['angular'], function (angular) {
         $scope.blogIndex = [];
         $scope.$parent.seo = {
             pageTitle: "Blogs from My Memory",
-            pageDescripton: "Blogs from My Memory"
+            pageDescripton: "Blogs from My Memory",
+            shareUrl: window.location.href
         };
 
         $scope.retrieveBlogIndex = function () {

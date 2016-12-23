@@ -7,6 +7,10 @@ define(['angular'], function (angular) {
 
         $scope.blogIndex = [];
         $scope.fileName = $stateParams.fileName;
+        $scope.socialShareModel = {
+            Url: window.location.href
+        }
+
 
         $scope.retrieveBlogDetails = function () {
             var response = BlogService.getBlogDetails($scope.fileName);
@@ -14,7 +18,13 @@ define(['angular'], function (angular) {
                 $scope.blogIndex.push(data);
                 $scope.$parent.seo = {
                     pageTitle : data.title,
-                    pageDescripton: data.shortText
+                    pageDescripton: data.shortText,
+                    shareUrl: window.location.href
+                };
+                $scope.socialShareModel = {
+                    Url: window.location.href,
+                    Name: data.shortText,
+                    ImageUrl: 'https://outofmymemory.herokuapp.com/img/logo/logo-2.png'
                 };
 
             });

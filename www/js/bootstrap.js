@@ -29,6 +29,8 @@ define(['ionic', 'angular', 'app', 'routes'], function (ionic, angular, app) {
                         document.body.scrollTop = document.documentElement.scrollTop = 0;
                     });
 
+                    $rootScope.facebookAppId = '1197641786991373';
+
                     $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams){
 
 

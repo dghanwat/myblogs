@@ -24,7 +24,7 @@
                                                                  data-sid="plcolumn" data-clone="ubc479"
                                                                  class="pl-section span8 offset0    pl-bg-cover section-plcolumn"
                                                                  style="  ">
-                                                            <div class="pl-section-pad fix">
+                                                            <div class="pl-section-pad fix no-bt-mgr">
                                                                 <div class="pl-sortable-column pl-sortable-area editor-row ">
                                                                     <div class="row grid-row">
                                                                         <!-- iBlog | Section Template -->
@@ -32,7 +32,7 @@
                                                                                  data-sid="iblog" data-clone="uqcl0lc"
                                                                                  class="pl-section span12 offset0    pl-bg-cover multi-post section-iblog"
                                                                                  style="  ">
-                                                                            <div class="pl-section-pad fix">
+                                                                            <div class="pl-section-pad fix no-bt-mgr">
                                                                                 <div class="row fix ipost"
                                                                                      ng-repeat="content in blogIndex">
                                                                                     <div class="span1 ipost-date">
@@ -60,7 +60,8 @@
                                                                                                             href="#/category">{{content.category}}</a></span></span>
                                                                                                     </div>
                                                                                                     <!-- <div ng-bind-html="content.content"></div> -->
-                                                                                                     <ng-include src="content.contentFile"></ng-include>
+                                                                                                    <ng-include
+                                                                                                            src="content.contentFile"></ng-include>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </article>
@@ -135,6 +136,59 @@
                                                         </section>
                                                     </div>
                                                     <div class="row grid-row">
+
+                                                        <!-- ShareBar | Section Template -->
+                                                        <section id="sharebaru1e8tg1" data-object="PageLinesShareBar"
+                                                                 data-sid="sharebar" data-clone="u1e8tg1"
+                                                                 class="pl-section span8 offset0    pl-bg-cover section-sharebar"
+                                                                 style="  ">
+                                                            <div class="pl-section-pad fix">
+                                                                <div class="pl-sharebar">
+                                                                    <div class="pl-sharebar-pad">
+                                                                        <div class="pl-social-counters pl-animation-group ">
+                                                                            <div facebook-like
+                                                                                 fb-like="socialShareModel.Url"></div>
+                                                                            <!--<a class="pl-karma pl-social-counter pl-social-pagelines pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
+                                                                               <!--id="pl-karma-1196" title="Give Karma"-->
+                                                                               <!--data-social="pagelines"> -->
+                                                                                <!--<span-->
+                                                                                    <!--class="pl-social-icon"><i-->
+                                                                                    <!--class="icon icon-thumbs-up"></i>-->
+                                                                                <!--</span>-->
+                                                                                <!--<span class="pl-social-count">13</span></a><span-->
+                                                                                <!--title="Facebook"-->
+                                                                                <!--class="pl-social-counter pl-social-facebook pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
+                                                                                <!--data-social="facebook">-->
+                                                                            <!--<span class="pl-social-icon"><i-->
+                                                                                    <!--class="icon icon-facebook"></i> </span><span-->
+                                                                                <!--class="pl-social-count"></span></span><span-->
+                                                                                <!--title="Linkedin"-->
+                                                                                <!--class="pl-social-counter pl-social-linkedin pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
+                                                                                <!--data-social="linkedin"><span-->
+                                                                                <!--class="pl-social-icon"><i-->
+                                                                                <!--class="icon icon-linkedin"></i> </span><span-->
+                                                                                <!--class="pl-social-count"></span></span><span-->
+                                                                                <!--title="Twitter"-->
+                                                                                <!--class="pl-social-counter pl-social-twitter pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
+                                                                                <!--data-social="twitter"><span-->
+                                                                                <!--class="pl-social-icon"><i-->
+                                                                                <!--class="icon icon-twitter"></i> </span><span-->
+                                                                                <!--class="pl-social-count"></span></span><span-->
+                                                                                <!--title="Pinterest"-->
+                                                                                <!--class="pl-social-counter pl-social-pinterest pl-animation pla-from-top subtle icon pla-group animation-loaded"-->
+                                                                                <!--data-social="pinterest"><span-->
+                                                                                <!--class="pl-social-icon"><i-->
+                                                                                <!--class="icon icon-pinterest"></i> </span><span-->
+                                                                                <!--class="pl-social-count"></span></span>-->
+                                                                        </div>
+                                                                        <div class="clear"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+
+                                                    <div class="row grid-row">
                                                         <div id="disqus_thread"></div>
                                                         <script>
 
@@ -142,22 +196,24 @@
                                                              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                                                              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
-                                                             var disqus_config = function () {
-                                                             this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+                                                            var disqus_config = function () {
+                                                                this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
                                                                 var pageIdentifier = window.location.hash;
-                                                                pageIdentifier = pageIdentifier.replace("#/blog/","");
+                                                                pageIdentifier = pageIdentifier.replace("#/blog/", "");
                                                                 pageIdentifier = pageIdentifier + 1;
-                                                             this.page.identifier = pageIdentifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                                                this.page.identifier = pageIdentifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                                                                 console.log(this.page.identifier);
-                                                             };
-                                                            (function() { // DON'T EDIT BELOW THIS LINE
+                                                            };
+                                                            (function () { // DON'T EDIT BELOW THIS LINE
                                                                 var d = document, s = d.createElement('script');
                                                                 s.src = '//outofmymemory.disqus.com/embed.js';
                                                                 s.setAttribute('data-timestamp', +new Date());
                                                                 (d.head || d.body).appendChild(s);
                                                             })();
                                                         </script>
-                                                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                                        <noscript>Please enable JavaScript to view the <a
+                                                                href="https://disqus.com/?ref_noscript">comments powered
+                                                            by Disqus.</a></noscript>
 
                                                     </div>
 

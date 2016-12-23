@@ -13,7 +13,8 @@ requirejs.config({
         angularNotify: '../lib/angular-notify/angular-notify.min',
         angularBase64: '../lib/angular-base64/angular-base64.min',
         ngCordova: '../lib/ngCordova/ng-cordova.min',
-        angulartics:'../lib/angulartics/angulartics.min'
+        angulartics:'../lib/angulartics/angulartics.min',
+        jquery: '../wp-includes/js/jquery/jqueryb8ff'
     },
     shim: {
         angular : {exports : 'angular'},
@@ -27,6 +28,7 @@ requirejs.config({
         angularBase64:{deps: ['angular']},
         ngCordova:{deps:['angular']},
         angulartics:{deps:['angular']}
+
     },
     priority: [
         'angular',
