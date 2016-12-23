@@ -46,6 +46,14 @@ define(['angular','jquery'], function (angular,$) {
                 return;
             } else {
                 element.html('<div class="fb-like"' + (!!scope.fbLike ? ' data-href="' + scope.fbLike + '"' : '') + ' data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>');
+                var elementHtml = '<div class="fb-like"' + (!!scope.fbLike ? ' data-href="' + scope.fbLike + '"' : '') + ' data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">'+
+                        '<span title="Facebook"' +
+                        ' class="pl-social-counter pl-social-twitter pl-animation pla-from-top subtle icon pla-group animation-loaded" '+
+                        ' data-social="facebook">'+
+                        '<span class="pl-social-icon">'+
+                        '<i class="icon icon-facebook"></i>'+
+                        '</span></div>';
+                //element.html(elementHtml);
                 $window.FB.XFBML.parse(element.parent()[0]);
             }
         }

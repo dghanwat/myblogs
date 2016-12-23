@@ -14,6 +14,8 @@ define(function (require) {
     directives.directive('recentBlogs', require('directives/RecentBlogsDirective') );
     directives.directive('recommendedBlogs', require('directives/RecommendedBlogsDirective') );
     directives.directive('facebookLike', require('directives/FBDirective') );
+    directives.directive('googlePlus', require('directives/GooglePlusDirective') );
+    directives.directive('tweet', require('directives/TweetDirective') );
 
     return directives;
 });
