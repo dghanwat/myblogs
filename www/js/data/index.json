@@ -1,4 +1,14 @@
 [
+
+  {
+    "id": 100006,
+    "date": "02/Jan/2017",
+    "fileName": "errorhandlingstrategy",
+    "title": "Error handing guidelines",
+    "shortText": "Having a consistent strategy across the system for error handling is very important in any application. The side effects of not having a good error handling & reporting solution are often seen when the system has gone live and the operation team struggle to keep the system running in case of any problem. In this post I suggest few guidelines for a coherent error handling",
+    "category": "General",
+    "recommended": true
+  },
   {
     "id": 100005,
     "date": "06/Dec/2016",

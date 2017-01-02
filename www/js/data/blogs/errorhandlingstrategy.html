@@ -1,0 +1,118 @@
+<p>Having a consistent strategy across the system for error handling is very important in any application. The side
+    effects of not having a good error handling &amp; reporting solution are often seen when the system has gone live
+    and the operation team struggle to keep the system running in case of any problem. In this post I suggest few
+    guidelines for a coherent error handling.</p>
+<h2>Objectives of Error Handling</h2>
+<p>The goal of successful Error Handling strategy is to</p>
+<ul>
+    <li>to detect software fault, exception conditions, system errors and failures and</li>
+    <li>to define procedures handle them internally and / or gracefully notify the user</li>
+</ul>
+<p>Objective of error handling strategy is to define all actions and conventions required to properly handle errors in
+    software application.</p>
+<p>The following are the main objectives of the Error Handling Strategy:</p>
+<ul>
+    <li>Implement an error handling mechanism that is consistent between all of the components across solution</li>
+    <li>Format of the error codes to be consistent across all components</li>
+    <li>Define unique error codes to allow appropriate classification of the error source and category</li>
+    <li>To identify where the error has occurred precisely from the source of the issue</li>
+    <li>To understand the incident type and severity clearly</li>
+    <li>To raise Alarms appropriately to the right team supporting the application and handle the error condition
+        quickly and precisely
+    </li>
+</ul>
+<p>Application logs should include data to</p>
+<ul>
+    <li>Provide information about problems and unusual conditions</li>
+    <li>Contribute additional application-specific data for incident investigation</li>
+</ul>
+
+<h2>Requirements of Error Handling</h2>
+<p>The primary requirements or the expectations of the any error handling strategy are</p>
+<ul>
+    <li>Log information such as What (Error Code) and Where (Transaction ID) when an Event of Exception has occurred.
+        Exception events should be enriched with Error Codes that have unique format and Event ID unique to the
+        transaction and logged.
+    </li>
+    <li>The error events are notified appropriately to the
+        <ul>
+            <li>End users</li>
+            <li>Application support</li>
+            <li>Infrastructure support</li>
+        </ul>
+    </li>
+</ul>
+<p>as relevant.</p>
+<ul>
+    <li>Diagnostic procedures are defined so that the exceptions can be diagnosed to be reproduced and the error
+        condition can be corrected or fixed as appropriate.
+    </li>
+    <li>The application can handle all of the exception conditions gracefully and can continue to process the
+        transactions or the user requests successfully.
+    </li>
+    <li>In fatal conditions the transactions are terminated gracefully or notified to all relevant parties and the
+        transaction/session terminated gracefully depending on the condition.
+    </li>
+</ul>
+<p>At the bottom line there are only two options when an exception occurs in the system</p>
+<ul>
+    <li>Catch and handle the exception, so that the application can continue as normal, or,</li>
+    <li>If the exception is severe and cannot be handled, then close the relevant resources such as database connection
+        notify the users gracefully and terminate the current transaction / session.
+    </li>
+</ul>
+<p>The success of an exception handling system comes from categorically handling the exceptions by correctly detecting
+    the level of the error condition and raising so that the right users of the system can successfully handle the error
+    condition in the best possible way.</p>
+<p>Apart from handling and notifying the exception conditions a good error handling strategy can also define the Fix
+    Descriptions or Operating Procedures for those error conditions as guidance for the operator personnel to follow to
+    fix the issues.</p>
+<h2>Message Severity</h2>
+<p>It is always a good idea to use possible levels of Severities to categorize the error handling. Categorizing the
+    errors to ERROR/CRITICAL/FATAL categories will enable the Application Support to prioritize the incidents.</p>
+<h3>FATAL</h3>
+<p>A system error or failure has occurred. Errors that cause system crash resulting in loss or corruption of unsaved
+    data. A particular system is in an unusable state while other parts of the system continue to function. Automatic
+    recovery is not possible; the immediate attention of the administrator is needed to resolve the problem.</p>
+<p>Fatal errors that the error cannot be recovered from before it is fixed by the support team for eg. unsupported
+    Encoding Exception.</p>
+<h3>CRITICAL</h3>
+<p>An application error has occurred. The system can recover but there might be a momentary loss or degradation of
+    service. The immediate attention of the administrator required to fix the problem and prevent it from happening in
+    the future. These generally used to indicate a failure in secondary system, such as, when a subsystem isn&rsquo;t
+    available momentarily.</p>
+<p>For eg. Failure of the Java VM and memory allocation error falls into this category. Manual intervention is required
+    to fix this type of error before retrying again.</p>
+<h3>ERROR</h3>
+<p>A user error has occurred. The system or application can handle the error with no interruption and limited
+    degradation of service. Retrying could fix these type errors. Typically are non-urgent errors, and can be solved in
+    a given time frame.</p>
+<p>Validation Errors falls into this category.</p>
+<h3>WARNING</h3>
+<p>A suspicious operation or configuration has occurred but it might not affect normal operation. There are not error
+    messages, but an indication that an error will occur if no action is taken.</p>
+<h3>INFO</h3>
+<p>A low-level informational message; used for reporting normal operations. These messages may be used for reporting and
+    measuring the throughput of the system. Developers should make sure only &ldquo;no action required&rdquo; messages
+    are logged in using this level. Info level message could be a csv list of parameters and values exchanged at that
+    point of transaction.</p>
+<h3>DEBUG</h3>
+<p>A debug message used for internal debugging during development and system test. Any information that is useful during
+    operations MUST not be part of DEBUG level messages.</p>
+<h2>Error Codes</h2>
+<p>The aim is to achieve a consistent format for the error codes that can identify each business and functional errors
+    uniquely across all of the components in the solution.</p>
+<p>In order to ensure the consistency across the error handling in the solution, it is required that</p>
+<ul>
+    <li>the format of the Error codes to be unique and consistent and</li>
+    <li>use standard Error object to capture and log the exceptions between all Components within the project</li>
+</ul>
+<p>One example of generating the error codes can be to use a combination of package name, an acronym and a serial
+    number. The package name and defines the range of the error codes in conjunction with the four digit serial number
+    starting from 0001 as in the format below:</p>
+<p>&lt;PACKAGE NAME&gt; + &lt;ACRONYM&gt; + 0001&hellip;9999</p>
+<div class="alert alert-info alert-block">
+    <p >In the next part of this post I will explain how can we use Aspects to have a centralized error handling &amp;
+        reporting mechanism</p>
+</div>
+</section>

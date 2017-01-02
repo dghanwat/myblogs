@@ -9,7 +9,7 @@ define(['angular'], function (angular) {
             link: link,
             restrict: 'EA',
             scope: true,
-            template: '<h2 class="widgettitle">Recent Posts</h2><ul><li ng-repeat="x in recentBlogs"><a href="#/blog/{{x.fileName}}">{{x.title}}</a></li></ul>',
+            template: '<h2 class="widgettitle">Recent Posts</h2><ul><li ng-repeat="x in recentBlogs"><a href="/blog/{{x.fileName}}">{{x.title}}</a></li></ul>',
         };
 
         return directive;

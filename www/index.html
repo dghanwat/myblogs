@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <base href="/">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="fragment" content="!">
-    <meta name="description" content="{{ seo.metaDescription }}">
+    <meta name="description" content="{{ seo.pageDescripton }}">
     <title>{{seo.pageTitle}}</title>
-    <meta property="og:url"           content="https://outofmymemory.herokuapp.com" />
+     <meta property="og:url"           content="https://outofmymemory.herokuapp.com" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="OutOfMyMemory" />
-    <meta property="og:description"   content="We are a respected blog with niche content. The articles provide useful best practices, tutorials, articles, code samples and snippets on latest technologies such as Core Java, AngularJS , Design Patterns, Ionic Framework, Scala etc." />
-    <meta property="og:image"         content="https://outofmymemory.herokuapp.com/img/logo/logo-2.png" />
+     <meta property="og:title"         content="OutOfMyMemory:Error handing guidelines" />
+     <meta property="og:description"   content="Having a consistent strategy across the system for error handling is very important in any application. The side effects of not having a good error handling & reporting solution are often seen when the system has gone live and the operation team struggle to keep the system running in case of any problem. In this post I suggest few guidelines for a coherent error handling" />
+    <!--<meta property="og:url"           content="{{seo.shareUrl}}" />-->
+    <!--<meta property="og:title"         content="{{seo.pageTitle}}" />-->
+    <!--<meta property="og:description"   content="{{ seo.pageDescripton }}" />-->
+    <meta property="og:image"         content="https://outofmymemory.mysoupy.com/img/logo/logo-2.png" />
     <!-- Styles -->
     <style type="text/css">
         img.wp-smiley,
@@ -26,22 +30,22 @@
         }
     </style>
     <link rel='stylesheet' id='prettify-css'
-          href='../wp-content/themes/iblogpro6/dms/js/prettify/prettify1c9b.css?ver=4.6.1' type='text/css' media='all'/>
+          href='./wp-content/themes/iblogpro6/dms/js/prettify/prettify1c9b.css?ver=4.6.1' type='text/css' media='all'/>
     <link rel='stylesheet' id='pagelines-less-core-css'
-          href='../wp-content/uploads/sites/6/pagelines/compiled-css-core-1412801242.css' type='text/css' media='all'/>
+          href='./wp-content/uploads/sites/6/pagelines/compiled-css-core-1412801242.css' type='text/css' media='all'/>
     <link rel='stylesheet' id='pagelines-less-sections-css'
-          href='../wp-content/uploads/sites/6/pagelines/compiled-css-sections-1412801242.css' type='text/css'
+          href='./wp-content/uploads/sites/6/pagelines/compiled-css-sections-1412801242.css' type='text/css'
           media='all'/>
     <link rel='stylesheet' id='master_font_import-css'
           href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C600%2C800&amp;ver=1bef02' type='text/css'
           media='all'/>
     <!-- Scripts -->
     <script type='text/javascript'
-            src='../wp-content/themes/iblogpro6/dms/js/prettify/prettify.min1c9b.js?ver=4.6.1'></script>
-    <link rel="stylesheet" href="/css/styles.css"/>
-    <script type='text/javascript' src='../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
-    <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
-    <link rel="apple-touch-icon" href="../wp-content/themes/iblogpro6/images/default-touch-icon.html"/>
+            src='./wp-content/themes/iblogpro6/dms/js/prettify/prettify.min1c9b.js?ver=4.6.1'></script>
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <script type='text/javascript' src='./wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='./wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+    <link rel="apple-touch-icon" href="./wp-content/themes/iblogpro6/images/default-touch-icon.html"/>
     <link rel="profile" href="http://gmpg.org/xfn/11"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <style type="text/css">.recentcomments a {
@@ -75,7 +79,7 @@
         <ul id="menu-main" class="mobile-menu primary-menu">
             <li id="menu-item-1605"
                 class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-1605">
-                <a href="/#">Blogs</a>
+                <a href="/">Blogs</a>
 
             </li>
         </ul>
@@ -128,7 +132,7 @@
                                                         <div class="fix">
                                                             <div class="row">
                                                                 <div class="span4 no-bt-mgr logo-cls">
-                                                                    <a href="#/"><img src="img/logo/logo-2.png" ></a>
+                                                                    <a href="/"><img src="img/logo/logo-2.png" ></a>
                                                                 </div>
                                                                 <div class="span6 offset2 pull-right">
                                                                     <div class="icons">
@@ -146,7 +150,7 @@
                                                             <div class="nav-wrap fix classic">
                                                                 <ul class="homebutton">
                                                                     <li>
-                                                                        <a href="#/" title="Home"><i
+                                                                        <a href="/" title="Home"><i
                                                                                 class="fa fa-home"></i></span></a>
                                                                     </li>
                                                                 </ul>
@@ -155,7 +159,7 @@
                                                                     style="">
                                                                     <li
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-97 current_page_item current_page_parent current-menu-ancestor current-menu-parent current_page_ancestor menu-item-has-children sf-with-ul menu-item-1605">
-                                                                        <a href="#/home">Blogs<span
+                                                                        <a href="/home">Blogs<span
                                                                                 class="sub-indicator"></span></a>
 
                                                                     </li>
@@ -215,14 +219,14 @@
                                                                 <ul class="media-list">
                                                                     <lh class="title">Links</lh>
                                                                     <li class="page_item page-item-7"><a
-                                                                            href="#/">Home</a></li>
+                                                                            href="/">Home</a></li>
                                                                     <li class="page_item page-item-1288"><a
-                                                                            href="#/advertise">Advertise</a></li>
+                                                                            href="/advertise">Advertise</a></li>
                                                                     <!--<li class="page_item page-item-1545"><a href="#/contactus">Contact Us</a></li>-->
                                                                     <li class="page_item page-item-1293"><a
-                                                                            href="#/privacypolicy">Privacy Policy</a>
+                                                                            href="/privacypolicy">Privacy Policy</a>
                                                                     </li>
-                                                                    <li class="page_item page-item-1558"><a href="#/aboutme">About Me</a></li>
+                                                                    <li class="page_item page-item-1558"><a href="/aboutme">About Me</a></li>
                                                                 </ul>
                                                             </div>
                                                             <!--<div class="span3">-->

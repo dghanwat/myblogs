@@ -14,7 +14,7 @@ define(['angular','jquery'], function (angular,$) {
         };
 
         function link(scope, element, attrs) {
-            if (true) { //!$window.FB
+            if (!$window.FB) { //!
                 // Load Facebook SDK if not already loaded
                 $.getScript('//connect.facebook.net/en_US/sdk.js', function () {
                     $window.FB.init({
@@ -31,7 +31,8 @@ define(['angular','jquery'], function (angular,$) {
 
         var watchAdded = false;
         function renderLikeButton(scope,attrs,element) {
-            if (!!attrs.fbLike && !scope.fbLike && !watchAdded) {
+            //if (!!attrs.fbLike && !scope.fbLike && !watchAdded) {
+            if (false) {
                 // wait for data if it hasn't loaded yet
                 watchAdded = true;
                 var unbindWatch = scope.$watch('fbLike', function (newValue, oldValue) {

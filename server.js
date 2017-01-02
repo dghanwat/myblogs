@@ -12,6 +12,12 @@ app.use(require('prerender-node'));
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/www/index.html');
 });
+app.get('/home', function (req, res) {
+  res.sendFile(__dirname + '/www/index.html');
+});
+app.get('/blog/*', function (req, res) {
+  res.sendFile(__dirname + '/www/index.html');
+});
 
 var server = app.listen(PORT, function () {
   var host = server.address().address;

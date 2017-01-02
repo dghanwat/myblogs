@@ -3,12 +3,13 @@
 define(['angular'], function (angular) {
     'use strict';
 
-    var BlogDetailsCtrl = function ($scope, $state, BlogService, $stateParams) {
 
+    var BlogDetailsCtrl = function ($scope, $state, BlogService, $stateParams) {
+        $scope.baseURL = "https://www.outofmymemory.mysoupy.com/";
         $scope.blogIndex = [];
         $scope.fileName = $stateParams.fileName;
         $scope.socialShareModel = {
-            Url: window.location.href
+            Url: $scope.baseURL + window.location.pathname
         }
 
 
@@ -19,12 +20,12 @@ define(['angular'], function (angular) {
                 $scope.$parent.seo = {
                     pageTitle : data.title,
                     pageDescripton: data.shortText,
-                    shareUrl: window.location.href
+                    shareUrl: $scope.baseURL + window.location.pathname
                 };
                 $scope.socialShareModel = {
-                    Url: window.location.href,
+                    Url: $scope.baseURL + window.location.pathname,
                     Name: data.shortText,
-                    ImageUrl: 'https://outofmymemory.herokuapp.com/img/logo/logo-2.png'
+                    ImageUrl: $scope.baseURL + "img/logo/logo-2.png"
                 };
 
             });
