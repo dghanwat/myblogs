@@ -4,8 +4,8 @@ define(['angular'], function (angular) {
     'use strict';
 
 
-    var BlogDetailsCtrl = function ($scope, $state, BlogService, $stateParams) {
-        $scope.baseURL = "https://outofmymemory.herokuapp.com/blog/";
+    var BlogDetailsCtrl = function ($scope, $state, BlogService, $stateParams,$http) {
+        $scope.baseURL = "https://outofmymemory.herokuapp.com/";
         $scope.blogIndex = [];
         $scope.fileName = $stateParams.fileName;
         $scope.socialShareModel = {
@@ -27,6 +27,16 @@ define(['angular'], function (angular) {
                     Name: data.shortText,
                     ImageUrl: $scope.baseURL + "img/logo/logo-2.png"
                 };
+                $http.post(
+                    'https://graph.facebook.com',
+                    {
+                        id: $scope.socialShareModel.Url,
+                        scrape: true
+                    },
+                    function(response){
+                        console.log(response);
+                    }
+                );
 
             });
 
@@ -36,7 +46,7 @@ define(['angular'], function (angular) {
 
     };
 
-    BlogDetailsCtrl.$inject = ['$scope', '$state', 'BlogService', '$stateParams'];
+    BlogDetailsCtrl.$inject = ['$scope', '$state', 'BlogService', '$stateParams','$http'];
     return BlogDetailsCtrl;
 
 });
