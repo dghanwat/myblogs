@@ -6,7 +6,7 @@ define(['angular'], function (angular) {
 
 
     var HomeCtrl = function ($scope, $state, BlogService) {
-        $scope.baseURL = "http://www.outofmymemory.mysoupy.com/";
+        $scope.baseURL = "https://outofmymemory.herokuapp.com/";
 
         $scope.blogIndex = [];
         $scope.$parent.seo = {

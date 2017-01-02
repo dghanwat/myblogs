@@ -5,7 +5,7 @@ define(['angular'], function (angular) {
 
 
     var BlogDetailsCtrl = function ($scope, $state, BlogService, $stateParams) {
-        $scope.baseURL = "https://www.outofmymemory.mysoupy.com/";
+        $scope.baseURL = "https://outofmymemory.herokuapp.com/blog/";
         $scope.blogIndex = [];
         $scope.fileName = $stateParams.fileName;
         $scope.socialShareModel = {
