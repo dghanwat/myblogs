@@ -1,26 +1,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://outofmymemory.herokuapp.com/#/home</loc>
+        <loc>https://outofmymemory.herokuapp.com/home</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://outofmymemory.herokuapp.com/#/blog/restapidesign</loc>
+        <loc>https://outofmymemory.herokuapp.com/blog/restapidesign</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://outofmymemory.herokuapp.com/#/blog/apireference</loc>
+        <loc>https://outofmymemory.herokuapp.com/blog/apireference</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://outofmymemory.herokuapp.com/#/blog/microservices</loc>
+        <loc>https://outofmymemory.herokuapp.com/blog/microservices</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://outofmymemory.herokuapp.com/#/blog/first-principles-of-unit-testing</loc>
+        <loc>https://outofmymemory.herokuapp.com/blog/first-principles-of-unit-testing</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://outofmymemory.herokuapp.com/blog/errorhandlingstrategy</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
