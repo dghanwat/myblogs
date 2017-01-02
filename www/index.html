@@ -2,6 +2,7 @@
 <html lang="en-US">
 <head>
     <base href="/">
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="fragment" content="!">
     <meta name="description" content="{{ seo.pageDescripton }}">
@@ -11,9 +12,12 @@
     <!--<meta property="og:url"           content="https://outofmymemory.herokuapp.com" />-->
     <!--<meta property="og:title"         content="OutOfMyMemory:Error handing guidelines" />-->
     <!--<meta property="og:description"   content="Having a consistent strategy across the system for error handling is very important in any application. The side effects of not having a good error handling & reporting solution are often seen when the system has gone live and the operation team struggle to keep the system running in case of any problem. In this post I suggest few guidelines for a coherent error handling" />-->
-    <meta property="og:url"           content="{{seo.shareUrl}}" />
-    <meta property="og:title"         content="{{seo.pageTitle}}" />
-    <meta property="og:description"   content="{{ seo.pageDescripton }}" />
+    <!--<meta property="og:url"           content="{{seo.shareUrl}}" />-->
+    <!--<meta property="og:title"         content="{{seo.pageTitle}}" />-->
+    <!--<meta property="og:description"   content="{{ seo.pageDescripton }}" />-->
+    <meta property="og:url"           content="<%=ogUrl%>" />
+    <meta property="og:title"         content="<%=ogTitle%>"  />
+    <meta property="og:description"   content="<%=ogDescription%>"  />
     <meta property="og:image"         content="https://outofmymemory.herokuapp.com/img/logo/logo-2.png" />
     <!-- Styles -->
     <style type="text/css">
@@ -189,9 +193,7 @@
                             </section>
                         </div>
                     </header>
-                    <div id="page-main" class="pl-region custom-template editing-locked"
-                         data-custom-template="iblog-iblogstandard" data-template-name="iBlog -  iBlog Standard"
-                         data-region="template">
+                    <div id="page-main" class="pl-region custom-template editing-locked">
                         <div id="dynamic-content" class="outline template-region-wrap pl-area-container " ui-view >
                         </div>
                         <div class="clear"></div>
