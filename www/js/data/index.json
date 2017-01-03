@@ -1,5 +1,13 @@
 [
-
+  {
+    "id": 100007,
+    "date": "03/Jan/2017",
+    "fileName": "botsarehere",
+    "title": "Bots are here",
+    "shortText": "Bots have arrived and they are here to stay. Robots, chatbots, conversational agents call them whatever you want, one thing is for sure they have arrived in full force and are there to stay. Facebook and other companies are betting heavily on bot technology.",
+    "category": "General",
+    "recommended": true
+  },
   {
     "id": 100006,
     "date": "02/Jan/2017",
